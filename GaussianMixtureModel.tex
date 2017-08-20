@@ -26,6 +26,12 @@ Pr$[z_{k,n} = 1 | \mathbf{x}_n] = q_{k, n} = \frac{\boldsymbol{\pi}_k^{(t-1)} \m
 $, \boldsymbol{\pi}_k^{(t)} := \frac{1}{N} \sum_{n=1}^N q_{k,n}$\\
 $\Sigma_k^{(t)} = \frac{\sum_{n=1}^N q_{k, n} (\mathbf{x}_n - \boldsymbol{\mu}_k^{(t)})(\mathbf{x}_n - \boldsymbol{\mu}_k^{(t)})^\top}{\sum_{n=1}^N q_{k,n}}$
 
+\subsection*{Gaussian distribution}
+Standard deviation $\sigma$, Mean $\mu$ \\
+$f(x) = \frac{1}{\sqrt{2\pi \sigma^2}} e^{- \frac{1}{2} \frac{(x-\mu)^2}{\sigma^2}}$\\
+Covariance matrix $\Sigma$, Mean $\mu$ \\
+$f(x) = \frac{1}{2\pi \sqrt{|\Sigma|}} e^{- \frac{1}{2} (x-\mu)^T \Sigma^{-1} (x-\mu)}$
+
 \subsection*{Discussion K-means vs. EM}
 hard assignment vs soft. sherical clusters shapes vs covariance matrix. fast vs slow and more iteration. K-means can be used as initialization for EM.\\
 K-means os a special case of GMM with covariances $\Sigma_j = \sigma^2 * I$. in the limit of $\sigma \rightarrow 0$, recover K-means.
