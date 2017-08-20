@@ -1,13 +1,13 @@
 % !TEX root = Main.tex
 \section{Convolutional Neural Networks}
-\textbf{Neurons}: $F_\sigma(\mathbf{x};\mathbf{w}) = \sigma(w_0 + \sum_{i=1}^M{x_iw_i})$.\\ \textbf{Output}:\\
-linear regression (logistic): $\mathbf{y} = \mathbf{W}^L\mathbf{x}^{L-1}$\\
-binary classification:\\
-$y_1 = \text{P}[Y=1|\mathbf{x}] = \frac{1}{1 + \exp[-\langle \mathbf{w}_1^L,\mathbf{x}^{L-1}\rangle]}$\\
+\textbf{Neurons}: $F_\sigma(\mathbf{x};\mathbf{w}) = \sigma(w_0 + \sum_{i=1}^M{x_iw_i})$.\\
+\textbf{Activation}: tanh, ReLu, $s(x)=\frac{1}{1+e^{-x}}$, $s'(x)=s(x)(1-s(x))$\\
+\textbf{Output}: linear regression: $\hat{\mathbf{y}} = \mathbf{W}^L\mathbf{x}^{L-1}$\\
+binary classification (logistic):\\
+$\hat{y_1} = \text{P}[Y=1|\mathbf{x}] = \frac{1}{1 + \exp[-\langle \mathbf{w}_1^L,\mathbf{x}^{L-1}\rangle]}$\\
 multiclass (soft-max):\\
-$y_k = \text{P}[Y=k|\mathbf{x}]= \frac{\exp[\langle \mathbf{w}_k^L,\mathbf{x}^{L-1}\rangle]}{\sum_{m=1}^{K}{\exp[\langle \mathbf{w}_m^L, \mathbf{x}^{L-1}\rangle]}}$.\\
-\textbf{Loss function} $l(y, \hat{y})$\\
-squared loss: $\frac{1}{2}(y - \hat{y})^2$\\
+$\hat{y_k} = \text{P}[Y=k|\mathbf{x}]= \frac{\exp[\langle \mathbf{w}_k^L,\mathbf{x}^{L-1}\rangle]}{\sum_{m=1}^{K}{\exp[\langle \mathbf{w}_m^L, \mathbf{x}^{L-1}\rangle]}}$.\\
+\textbf{Loss function} squared loss: $\frac{1}{2}(y - \hat{y})^2$\\
 cross-entropy loss: $-y \log \hat{y} - (1-y)\log(1-\hat{y})$.\\
 \textbf{Units and Layers}: layer-to-layer fwd. prop. notation: $\mathbf{x}^{l} = \sigma^{l}\left(\mathbb{W}^{\left(l\right)}\mathbf{x}^{\left(l-1\right)}\right)$. L-layer network: $\mathbf{y}=\sigma^{\left(L\right)}\left(\mathbf{W}^(L)\sigma^{(L-1)}\left(\cdots\left(\sigma^{(1)}\left(\mathbf{W}^{(1)}\mathbf{x}\right)\cdots\right)\right)\right)$
 
