@@ -1,5 +1,5 @@
 # Status
-In progress!
+Done!
 
 Feel free to go ahead and create your own fork if you want to extend it or update it in future years.
 
@@ -11,4 +11,4 @@ The content of this summary is largely based on [Gregor Wegberg's](https://githu
 It has been adapted to the new lecture content of 2017.
 
 # Download latest PDF
-TBD
+[Click here](https://latexonline.cc/pending?git=https%3A%2F%2Fgithub.com%2Fplokchen%2Feth-cil-exam-summary&target=main.tex&command=pdflatex&trackId=1504090609447)
