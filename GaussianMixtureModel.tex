@@ -10,7 +10,8 @@ $p_\theta(\mathbf{x}, \mathbf{z}) = \prod_{k=1}^K \left( \boldsymbol{\pi}_k p_{\
 \textbf{Likelihood of observed data $\mathbf{X}$:}\\
 $p_\theta(\mathbf{X}) = \prod_{n=1}^N p_\theta(\mathbf{x}_n) = \prod_{n=1}^N \left(\sum_{k=1}^K \pi_k p_{\theta_k}(\mathbf{x}_n)\right)$
 \textbf{Max. Likelihood Estimation (MLE):}\\
-$\argmax_\theta\sum_{n=1}^N \log \left( \sum_{k=1}^K \pi_k p_{\theta_k}(\mathbf{x}_n)\right)\\
+$\argmax_\theta\sum_{n=1}^N \log \left( \sum_{k=1}^K \pi_k p_{\theta_k}(\mathbf{x}_n)\right) = \\
+\sum_{n=1}^N \log \left( \sum_{k=1}^K q_{k}\frac{\pi_k p_{\theta_k}(\mathbf{x}_n)}{q_{k}}\right)\\
 \ge \sum_{n=1^N} \sum_{k=1}^K{q_k[\log p_{\theta_k}(\mathbf{x}_n) + \log \pi_k - \log q_k]}$\\
 with $\sum_{k=1}^K{q_k} = 1$ by Jensen Inequality.
 
